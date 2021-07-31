@@ -1,10 +1,6 @@
-import dictionary as dictionary
 import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
-import pandas as pd
-import bson
-from bson.raw_bson import RawBSONDocument
 from pymongo.errors import ConnectionFailure
 
 def find_2nd(string, substring):
@@ -19,12 +15,6 @@ response = requests.get("https://www.elcomercio.com/tag/juegos-olimpicos/")
 soup = BeautifulSoup(response.content)
 
 Contenidos = []
-Provider = []
-Duration = []
-Start_Date = []
-Offered_By = []
-No_Of_Reviews = []
-Rating = []
 ListSearch = []
 
 titulos = soup.find_all("h3")
