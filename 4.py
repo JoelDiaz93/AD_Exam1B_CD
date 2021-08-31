@@ -9,11 +9,11 @@ try:
     print('MongoDB connection: Success')
 except ConnectionFailure as cf:
     print('MongoDB connection: failed', cf)
-db = CLIENT["exam"]
+db = CLIENT["python"]
 facebook = db["facebook"]
 
 i = 1
-for post in get_posts('olympics', pages=1000, extra_info=True):
+for post in get_posts('olympics', pages=10, extra_info=True):
     print(i)
     i = i + 1
     time.sleep(1)

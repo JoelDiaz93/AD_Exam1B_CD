@@ -38,7 +38,7 @@ try:
     print('MongoDB connection: Success')
 except ConnectionFailure as cf:
     print('MongoDB connection: failed', cf)
-db = CLIENT["exam"]
+db = CLIENT["python"]
 game = db["juegosolimpicos"]
 
 x = game.insert_many(ListSearch)
